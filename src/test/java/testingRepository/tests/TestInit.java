@@ -10,6 +10,10 @@ public class TestInit {
 
     WebDriver driver;
 
+    public void goToEatStreet() {
+        driver.get("https://eatstreet.com/");
+    }
+
     @BeforeMethod
     public void setup() {
         WebDriverManager.chromedriver().setup();
@@ -17,7 +21,15 @@ public class TestInit {
     }
 
     @AfterMethod
-    public void tearDown (){
+    public void tearDown() {
         driver.quit();
+    }
+
+    public void sleep(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
