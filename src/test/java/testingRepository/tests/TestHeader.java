@@ -3,7 +3,7 @@ package testingRepository.tests;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import testingRepository.pageObjects.HomePageElements;
+import testingRepository.pageObjects.HomePage;
 import testingRepository.pageObjects.SignInElements;
 
 public class TestHeader extends TestInit {
@@ -11,7 +11,7 @@ public class TestHeader extends TestInit {
     @Test
     public void checkHeader() {
 
-        HomePageElements homePageElements = new HomePageElements(driver);
+        HomePage homePageElements = new HomePage(driver);
         SignInElements signInElements = new SignInElements(driver);
 
         //Checking “Cart“ btn
